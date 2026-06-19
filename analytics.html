@@ -1,0 +1,100 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<div class="fade-in-up">
+    <h2><i class="fas fa-chart-line me-2"></i>Analytics</h2>
+    <p class="text-white-50">Advanced analytics and reports</p>
+    
+    <!-- Stats -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="glass-card text-center">
+                <h3>{{ total_projects }}</h3>
+                <p class="text-white-50">Total Projects</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="glass-card text-center">
+                <h3>{{ total_tasks }}</h3>
+                <p class="text-white-50">Total Tasks</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="glass-card text-center">
+                <h3>{{ completed_tasks }}</h3>
+                <p class="text-white-50">Completed</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="glass-card text-center">
+                <h3>{{ overdue_tasks }}</h3>
+                <p class="text-white-50">Overdue</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Export Buttons -->
+    <div class="glass-card mb-4">
+        <h5>Export Reports</h5>
+        <div class="d-flex gap-2">
+            <a href="/export/projects/" class="btn btn-primary"><i class="fas fa-file-csv me-2"></i>Export Projects CSV</a>
+            <a href="/export/tasks/" class="btn btn-primary"><i class="fas fa-file-csv me-2"></i>Export Tasks CSV</a>
+        </div>
+    </div>
+    
+    <!-- Project Progress -->
+    <div class="glass-card mb-4">
+        <h5>Project Progress</h5>
+        {% for project in project_data %}
+        <div class="mb-3">
+            <div class="d-flex justify-content-between">
+                <span>{{ project.name }}</span>
+                <span>{{ project.progress }}% ({{ project.completed }}/{{ project.total }})</span>
+            </div>
+            <div class="progress" style="height:8px;">
+                <div class="progress-bar" style="width:{{ project.progress }}%;background:linear-gradient(135deg,#6C63FF,#FF6B6B);"></div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-white-50">No projects yet</p>
+        {% endfor %}
+    </div>
+    
+    <!-- Team Performance -->
+    <div class="glass-card">
+        <h5>Team Performance</h5>
+        <div class="table-responsive">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th>Total Tasks</th>
+                        <th>Completed</th>
+                        <th>Completion Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for team in team_performance %}
+                    <tr>
+                        <td>{{ team.name }}</td>
+                        <td>{{ team.total }}</td>
+                        <td>{{ team.completed }}</td>
+                        <td>
+                            <div class="progress" style="height:20px;width:100px;">
+                                <div class="progress-bar" style="width:{{ team.completion_rate }}%;background:linear-gradient(135deg,#6C63FF,#FF6B6B);">
+                                    {{ team.completion_rate }}%
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="4" class="text-center text-white-50">No teams yet</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects - SprintHub{% endblock %}
+
+{% block content %}
+<div class="container mt-4" data-aos="fade-up">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold"><i class="fas fa-project-diagram me-2 text-primary"></i>Projects</h2>
+        <button class="btn btn-primary">
+            <i class="fas fa-plus me-2"></i>New Project
+        </button>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Project Cards -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card glass-card">
+                <div class="project-header">
+                    <div class="project-icon bg-gradient-primary">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-status">
+                        <span class="badge bg-success">Active</span>
+                    </div>
+                </div>
+                <h5 class="fw-bold">Website Redesign</h5>
+                <p class="text-secondary small">Redesign company website with modern UI</p>
+                <div class="project-progress">
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span>Progress</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%; background: var(--gradient-primary);"></div>
+                    </div>
+                </div>
+                <div class="project-meta d-flex justify-content-between mt-3">
+                    <span><i class="far fa-calendar me-1"></i>Due: Dec 31</span>
+                    <span><i class="fas fa-users me-1"></i>5 members</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card glass-card">
+                <div class="project-header">
+                    <div class="project-icon bg-gradient-success">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-status">
+                        <span class="badge bg-warning">In Progress</span>
+                    </div>
+                </div>
+                <h5 class="fw-bold">Mobile App Development</h5>
+                <p class="text-secondary small">Build cross-platform mobile application</p>
+                <div class="project-progress">
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span>Progress</span>
+                        <span>45%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 45%; background: var(--gradient-success);"></div>
+                    </div>
+                </div>
+                <div class="project-meta d-flex justify-content-between mt-3">
+                    <span><i class="far fa-calendar me-1"></i>Due: Feb 15</span>
+                    <span><i class="fas fa-users me-1"></i>8 members</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card glass-card">
+                <div class="project-header">
+                    <div class="project-icon bg-gradient-purple">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-status">
+                        <span class="badge bg-info">Planning</span>
+                    </div>
+                </div>
+                <h5 class="fw-bold">Cloud Migration</h5>
+                <p class="text-secondary small">Migrate infrastructure to AWS</p>
+                <div class="project-progress">
+                    <div class="d-flex justify-content-between small mb-1">
+                        <span>Progress</span>
+                        <span>10%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 10%; background: var(--gradient-purple);"></div>
+                    </div>
+                </div>
+                <div class="project-meta d-flex justify-content-between mt-3">
+                    <span><i class="far fa-calendar me-1"></i>Due: Mar 30</span>
+                    <span><i class="fas fa-users me-1"></i>3 members</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

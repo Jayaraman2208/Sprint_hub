@@ -1,0 +1,89 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Boards - SprintHub{% endblock %}
+
+{% block content %}
+<div class="container mt-4" data-aos="fade-up">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold"><i class="fas fa-columns me-2 text-primary"></i>Boards</h2>
+        <button class="btn btn-primary">
+            <i class="fas fa-plus me-2"></i>New Board
+        </button>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="board-card glass-card">
+                <div class="board-header d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold">Sprint Planning</h5>
+                    <span class="badge bg-primary">5 tasks</span>
+                </div>
+                <div class="board-preview">
+                    <div class="task-preview">
+                        <span class="task-dot bg-danger"></span>
+                        <span>Fix critical bugs</span>
+                    </div>
+                    <div class="task-preview">
+                        <span class="task-dot bg-warning"></span>
+                        <span>Design new features</span>
+                    </div>
+                    <div class="task-preview">
+                        <span class="task-dot bg-success"></span>
+                        <span>Review pull requests</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-primary w-100 mt-3">Open Board</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="board-card glass-card">
+                <div class="board-header d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold">Development</h5>
+                    <span class="badge bg-warning">8 tasks</span>
+                </div>
+                <div class="board-preview">
+                    <div class="task-preview">
+                        <span class="task-dot bg-primary"></span>
+                        <span>API Integration</span>
+                    </div>
+                    <div class="task-preview">
+                        <span class="task-dot bg-info"></span>
+                        <span>Database optimization</span>
+                    </div>
+                    <div class="task-preview">
+                        <span class="task-dot bg-success"></span>
+                        <span>Unit testing</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-primary w-100 mt-3">Open Board</a>
+            </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="board-card glass-card">
+                <div class="board-header d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold">Design</h5>
+                    <span class="badge bg-success">3 tasks</span>
+                </div>
+                <div class="board-preview">
+                    <div class="task-preview">
+                        <span class="task-dot bg-purple"></span>
+                        <span>UI mockups</span>
+                    </div>
+                    <div class="task-preview">
+                        <span class="task-dot bg-info"></span>
+                        <span>Prototype testing</span>
+                    </div>
+                    <div class="task-preview">
+                        <span class="task-dot bg-success"></span>
+                        <span>Design system</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-primary w-100 mt-3">Open Board</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

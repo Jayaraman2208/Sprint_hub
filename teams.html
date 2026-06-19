@@ -1,0 +1,67 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Teams - SprintHub{% endblock %}
+
+{% block content %}
+<div class="container mt-4" data-aos="fade-up">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold"><i class="fas fa-users me-2 text-primary"></i>Teams</h2>
+        <button class="btn btn-primary">
+            <i class="fas fa-plus me-2"></i>New Team
+        </button>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-card glass-card text-center">
+                <div class="team-avatar-group">
+                    <img src="https://ui-avatars.com/api/?name=JD&background=4f46e5&color=fff" alt="">
+                    <img src="https://ui-avatars.com/api/?name=JS&background=10b981&color=fff" alt="">
+                    <img src="https://ui-avatars.com/api/?name=MK&background=f59e0b&color=fff" alt="">
+                    <span class="team-more">+2</span>
+                </div>
+                <h5 class="fw-bold mt-3">Development Team</h5>
+                <p class="text-secondary small">Full-stack development squad</p>
+                <div class="d-flex justify-content-center gap-2">
+                    <span class="badge bg-primary">6 members</span>
+                    <span class="badge bg-success">4 projects</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-card glass-card text-center">
+                <div class="team-avatar-group">
+                    <img src="https://ui-avatars.com/api/?name=AL&background=8b5cf6&color=fff" alt="">
+                    <img src="https://ui-avatars.com/api/?name=SM&background=3b82f6&color=fff" alt="">
+                    <img src="https://ui-avatars.com/api/?name=RT&background=ec4899&color=fff" alt="">
+                </div>
+                <h5 class="fw-bold mt-3">Design Team</h5>
+                <p class="text-secondary small">Creative and UX designers</p>
+                <div class="d-flex justify-content-center gap-2">
+                    <span class="badge bg-primary">3 members</span>
+                    <span class="badge bg-success">2 projects</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-card glass-card text-center">
+                <div class="team-avatar-group">
+                    <img src="https://ui-avatars.com/api/?name=PM&background=ef4444&color=fff" alt="">
+                    <img src="https://ui-avatars.com/api/?name=AK&background=14b8a6&color=fff" alt="">
+                    <img src="https://ui-avatars.com/api/?name=SR&background=8b5cf6&color=fff" alt="">
+                    <span class="team-more">+4</span>
+                </div>
+                <h5 class="fw-bold mt-3">Product Team</h5>
+                <p class="text-secondary small">Product management & strategy</p>
+                <div class="d-flex justify-content-center gap-2">
+                    <span class="badge bg-primary">7 members</span>
+                    <span class="badge bg-success">5 projects</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
